@@ -39,7 +39,7 @@ export default function Profile() {
                 <div className="left w-2/4 flex items-center justify-center">
                     <h1 className="font-bold">Profile</h1>
                 </div>
-                <div className="right w-2/4 flex flex-col items-center justify-between">
+                <div className="right w-2/4 flex flex-col items-center justify-around">
                     <div className="profile_circle flex items-center justify-center">{username?username.charAt(0).toLocaleUpperCase():"U"}</div>
                     <button className="px-4 py-2 bg-red-600 rounded " onClick={handleLogout}>Logout</button>
                 </div>
