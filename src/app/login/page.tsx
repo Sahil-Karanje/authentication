@@ -54,7 +54,7 @@ export default function Login() {
                 />
                 <button onClick={handleClick} className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">Login here</button>
             </div>
-            <Link href="/signup" className="underline font-medium mt-2">Don't have account? Signup here</Link>
+            <Link href="/signup" className="underline font-medium mt-2">Don&apos;t have account? Signup here</Link>
         </div>
     )
 }
