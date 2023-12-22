@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import './profile.css'
 
-export default function profile() {
+export default function Profile() {
     const [user, setUser] = useState({
         username: '',
         email: ''

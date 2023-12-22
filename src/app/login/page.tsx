@@ -6,7 +6,7 @@ import Link from "next/link";
 import toast from "react-hot-toast";
 import './login.css'
 
-export default function login() {
+export default function Login() {
     const router = useRouter();
     const [user, setUser] = useState({
         email: "",
