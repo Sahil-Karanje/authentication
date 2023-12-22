@@ -7,10 +7,7 @@ import toast from "react-hot-toast";
 import './profile.css'
 
 export default function Profile() {
-    const [user, setUser] = useState({
-        username: '',
-        email: ''
-    })
+    const [username, setUsername] = useState("")
     const router = useRouter();
     const handleLogout = async () => {
         try {
@@ -24,8 +21,8 @@ export default function Profile() {
     const getUserDetails = async () => {
         try {
             const res = await axios.get("/api/users/getdetails")
-            setUser(res.data.user)
-            console.log(res.data.user)
+            res?setUsername(res.data.user.username):setUsername("")
+            
         } catch (error: any) {
             return toast.error(error.message)
         }
@@ -43,7 +40,7 @@ export default function Profile() {
                     <h1 className="font-bold">Profile</h1>
                 </div>
                 <div className="right w-2/4 flex flex-col items-center justify-between">
-                    <div className="profile_circle flex items-center justify-center">{user.username.charAt(0).toUpperCase()}</div>
+                    <div className="profile_circle flex items-center justify-center">{username.charAt(0).toLocaleUpperCase()}</div>
                     <button className="px-4 py-2 bg-red-600 rounded " onClick={handleLogout}>Logout</button>
                 </div>
             </div>
