@@ -38,9 +38,6 @@ export default function Profile() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
-            {/* <h2></h2>
-            <h2>{user.email}</h2>
-             */}
             <div className="profile_box flex items-center justify-between">
                 <div className="left w-2/4 flex items-center justify-center">
                     <h1 className="font-bold">Profile</h1>
