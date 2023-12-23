@@ -15,6 +15,7 @@ export default function Profile() {
             router.push("/login")
         } catch (error: any) {
             toast.error(error.message)
+            console.log(error)
         }
     }
 
