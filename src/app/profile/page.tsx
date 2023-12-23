@@ -21,6 +21,7 @@ export default function Profile() {
     const getUserDetails = async () => {
         try {
             const res = await axios.get("/api/users/getdetails");
+            console.log(res)
             setUsername(res?.data?.user?.username || "");
         } catch (error:any) {
             console.error("Get user details error:", error);
