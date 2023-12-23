@@ -20,11 +20,11 @@ export default function Profile() {
 
     const getUserDetails = async () => {
         try {
-            const res = await axios.get("/api/users/getdetails")
-            res?setUsername(res.data.user.username):setUsername("")
-            
-        } catch (error: any) {
-            return toast.error(error.message)
+            const res = await axios.get("/api/users/getdetails");
+            setUsername(res?.data?.user?.username || "");
+        } catch (error:any) {
+            console.error("Get user details error:", error);
+            toast.error(error.message);
         }
     }
 
